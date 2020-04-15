@@ -1,0 +1,1 @@
+cmd_/home/student/assignment5/sleepy.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.13.0-45-generic/scripts/module-common.lds --build-id  -o /home/student/assignment5/sleepy.ko /home/student/assignment5/sleepy.o /home/student/assignment5/sleepy.mod.o
